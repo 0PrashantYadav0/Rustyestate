@@ -1,12 +1,12 @@
-import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Home, Profile, Signin, About, SignUp} from "./pages"
+import Header from './components/Header'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
    <BrowserRouter>
+   <Header/>
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/sign-up' element={<SignUp/>}/>
