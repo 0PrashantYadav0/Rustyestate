@@ -11,8 +11,12 @@ mongoose
   .then(() => {
     console.log("conneded to mongoDB")
   })
-  .catch(err => console.log(err)); 
+  .catch(err => console.log(err));
+
 const app = express();
+
 app.listen(port, () => {
  console.log(`listing on port ${port}`); 
 });
+
+app.use('/api/v1')
