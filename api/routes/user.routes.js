@@ -1,7 +1,8 @@
 import express from 'express';
+import { user } from '../controllers/user.controller.js';
 
 const router = express.Router();
 
-router.get('/api/user', function(req, res) {
+router.get('/api/user', user)
 
-})
+export default router;
