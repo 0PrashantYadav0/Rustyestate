@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { signInFailure, signInStart, signInSuccess } from '../config/user/userSlice';
+import OAuth from '../components/OAuth';
 
 function Signin() {
 
@@ -53,13 +54,16 @@ function Signin() {
         <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
           <input type="text" placeholder='email' className='rounded-lg border-2 px-4 py-2' id='email' onChange={handleChange}/>
           <input type="password" placeholder='password' className='rounded-lg border-2 px-4 py-2' id='password' onChange={handleChange}/>
-          <button disabled={loading} className='bg-slate-700 p-3 text-white rounded-lg hover:bg-slate-800 disabled:opacity-80'>{loading?"Loading...":"Sign In"}</button>
+          <button disabled={loading} className='bg-slate-700 p-3 text-white uppercase rounded-lg hover:bg-slate-800 disabled:opacity-80'>{loading?"Loading...":"Sign In"}</button>
+          <OAuth/>
         </form>
+        
         <p className='py-2 text-center text-red-600'>{error}</p>
         <div className='flex gap-2 mt-5'>
           <p>New User?</p>
           <Link to={'/sign-up'} className='text-blue-600 '>Sign Up</Link>
         </div>
+        
       </div>
     </div>
     </div>
