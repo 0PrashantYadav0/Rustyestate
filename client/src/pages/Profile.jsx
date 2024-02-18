@@ -169,7 +169,7 @@ export default function Profile() {
           onClick={() => fileRef.current.click()}
           src={formData.avatar || currentUser.avatar}
           alt='profile'
-          className='rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2'
+          className='rounded-full h-24 w-24 object-cover aspect-video cursor-pointer self-center mt-2'
         />
         <p className='text-sm self-center'>
           {fileUploadError ? (
@@ -257,7 +257,7 @@ export default function Profile() {
                 <img
                   src={listing.imageUrls[0]}
                   alt='listing cover'
-                  className='h-16 w-16 object-contain'
+                  className='h-16 w-16 object-contain aspect-video'
                 />
               </Link>
               <Link

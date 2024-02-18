@@ -345,7 +345,7 @@ export default function CreateListing() {
                 <img
                   src={url}
                   alt='listing image'
-                  className='w-20 h-20 object-contain rounded-lg'
+                  className='w-20 h-20 object-contain rounded-lg aspect-video'
                 />
                 <button
                   type='button'
